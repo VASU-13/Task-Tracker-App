@@ -22,7 +22,7 @@ import com.vs.TaskTracker.service.TaskService;
 
 @RestController
 @RequestMapping("/api/v1")
-@CrossOrigin(origins = "http://localhost:3000/")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TaskController {
 
 	@Autowired
@@ -43,7 +43,7 @@ public class TaskController {
 
 	
 	
-	@PutMapping("/task/{emailId}")
+	@PutMapping("/update/task/{emailId}")
 	public ResponseEntity<?> updateTask(@RequestBody Task task, @PathVariable String emailId)   {
 		
 		taskService.updateTask(task,emailId);

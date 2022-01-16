@@ -28,7 +28,7 @@ public class Task implements Comparable<Task>{
 	)
 	@GeneratedValue(
 			strategy = GenerationType.SEQUENCE,
-			generator = "teacher_sequence"
+			generator = "task_sequence"
 	)
 	private Long taskId;
 	private String taskName;
